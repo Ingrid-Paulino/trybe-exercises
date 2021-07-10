@@ -9,6 +9,8 @@
         height: 50px;
         text-align: center;
         width: 200px;
+        display: block;
+        margin-left: 200px;
       }
 
       .second {
@@ -17,6 +19,7 @@
         height: 50px;
         text-align: center;
         width: 300px;
+        display: inline-block;
       }
 
       .third {
@@ -25,5 +28,13 @@
         height: 50px;
         text-align: center;
         width: 300px;
+        display: inline-block;
       }
 
+      li {
+        display: inline-block;
+      }
+
+      h3 {
+        text-align: center;
+      }

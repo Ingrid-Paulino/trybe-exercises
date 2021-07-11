@@ -1,4 +1,4 @@
-//Parte II
+//Parte I e II
 const nome = "Ingrid";
 const birthCity = "Belo Horizonte";
 let birthYear = 2030;

@@ -1,5 +1,5 @@
 body {
-  font-size: 2em;
+  font-size: 1.7em;
 }
 h1 {
   font-size: 1.1em;
@@ -26,17 +26,11 @@ figcaption {
   font-size: .8em;
 }
 
-@media screen and (min-width: 1017px) {
+@media screen and (min-width: 600px) {
   body {
-    background-color: lightcoral;
-    font-size: 1.4em;
-    font-family: monospace;
-    margin: 25px 6%;
+    background-color: salmon;
+    margin: 30px;
     text-align: justify;
-  }
-  
-  section p {
-    margin-right:70px ;
   }
 
   h1 {
@@ -45,9 +39,9 @@ figcaption {
   }
 
   figure {
-    float: left;
-    width: 45%;
-    margin-right: 4.5%;
+    /* float: left; */
+    width: 30%;
+    /* margin-right: 4.5%; */
 
   }
 
@@ -58,16 +52,22 @@ figcaption {
 
 }
 
-@media screen and (min-width: 1020px) {
+@media screen and (max-width: 600px) {
   body {
     background-color: rgba(0,255,0,.2);
     margin: 25px 10%;
     max-width: 1130px;
+    font-size: 1.5em;
+    font-family: monospace;
+    text-align: justify;
   }
 
+  h1 {
+    text-align: center;
+    font-size: 40px;
+  }
   figure {
     width: 30%;
-    margin-right: 2.5%;
+    /* margin-right: 2.5%; */
   }
-  
-}
+  }

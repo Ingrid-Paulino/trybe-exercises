@@ -262,6 +262,20 @@ html {
       font-size: 1.6em;
       margin: 23px 20px;
     }
+
+    .chapiter-conteiner {
+      display: flex;
+    }
+
+    .chapiter1{
+      background-color: whitesmoke;
+      margin: 10px 10px 0px 100px;
+    }
+
+    .chapiter2{
+      background-color: whitesmoke;
+      margin: 10px 100px 0px 10px;
+    }
   
     h3 {
       text-align: center;

@@ -45,3 +45,15 @@ const checkTernary = (fruit === `maçã`) ? `Essa fruta é vermelha`
 // pois torna o seu código truncado e difícil de ler, tirando todo o sentido de um
 // operador cujo objetivo é facilitar a sua vida e a da pessoa que lerá seu código
 // no futuro!
+
+
+// usamos so para blocos de decisão simples
+let idade = 90;
+
+if(idade >= 18){
+  console.log('Maior de idade!')
+}else{
+  console.log('menor de idade!')
+}
+
+idade >= 18 ? console.log('Maior de idade!') : console.log('menor de idade!');

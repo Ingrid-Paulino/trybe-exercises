@@ -1,4 +1,4 @@
-### Bloco 3
+# Bloco 3
 
 - Estruturas de página
 - Primeiros passos em CSS

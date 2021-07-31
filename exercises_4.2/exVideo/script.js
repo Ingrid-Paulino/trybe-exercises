@@ -25,13 +25,21 @@ for(let i = 0; i < groceryList.length; i += 1 ) {
 }
 
                //FOR/OF
-//ex:1 deu algo errado
+
 let names = ['João', 'Maria', 'Antônio', 'Margarida'];
 for(let name of names) {
-    console.log(names);
+    console.log(name);
 }
 
+const frutas = ['banana', 'maça', 'uva']
+for (fruta of frutas) {
+    console.log(fruta);
+}
 
 for(let i = 0; i <= 10; i += 1 ) {
     console.log([i])
+}
+
+for(let i = 0; i <= 10; i += 1 ) {
+    console.log(i)
 }

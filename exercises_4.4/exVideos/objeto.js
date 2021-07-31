@@ -41,7 +41,7 @@ for (let key in pizzas) {
 };
 
 for (let key in pizzas) {
-    console.log(pizzas.preco);
+    console.log(pizzas[key].preco);
 }; // forma 1 de printar
 
 for (let key in pizzas) {
@@ -82,11 +82,11 @@ let names = {
     person1: 'João',
     person2: 'Maria',
     person3: 'Jorge' 
-  };
+};
 
-  for(let key in names) {
-/      console.log(`Olá ${key, names[key]}`);
-  }
+for(let key in names) {
+    console.log(`Olá ${key, names[key]}`);
+}
 
 //-------------------------
 
@@ -116,13 +116,13 @@ let info = {
 
   console.log(info)
 
-  for(let key in info) {
+  for (let key in info) {
       console.log(key)
   }
 
   console.log('-----------------------')
 
-/  for(let key in info) {
+for (let key in info) {
       console.log(info[key]);
   }
 
@@ -144,7 +144,5 @@ let info2 = {
  console.log(dadosInfo(info, info2))
 
 
-//----------------------------
 
-//Parte II - Funções
 

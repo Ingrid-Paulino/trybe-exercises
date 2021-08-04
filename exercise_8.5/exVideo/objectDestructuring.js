@@ -9,8 +9,8 @@ const product = {
 // console.log(product.seller)
 
 //forma 2 de acessar os valores
-// const { name } = product;
-// console.log(name); // Smart TV Crystal UHD
+const { name } = product;
+console.log(name); // Smart TV Crystal UHD
 
 // alem do nome pegando pais valores do objeto
 const { name, seller } = product;

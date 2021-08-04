@@ -97,7 +97,7 @@ console.log(customer); /* {
 const specialFruit = ['banana', 'maça', 'mamão'];
 
 // Faça uma lista de complementos que você gostaria de adicionar
-const additionalItens = ['pera', 'uva', 'melão'];
+const additionalItens = ['mel', 'uva', 'melão'];
 
 const fruitSalad = (fruit, additional) => {
   // Esreva sua função aqui

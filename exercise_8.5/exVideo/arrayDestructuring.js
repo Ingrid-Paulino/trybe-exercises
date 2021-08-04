@@ -23,3 +23,60 @@ console.log(fourthCountry); // Canada
 
 // --------------------------------------
 // exercicios de fixação
+
+// ex 1
+const saudacoes = ['Olá', (saudacao) => console.log(saudacao)];
+
+saudacoes[1](saudacoes[0]); // Olá
+
+// Produza o mesmo resultado acima, porém utilizando array destructuring
+// -- não entendi
+const saudar = ['Olá'];
+const [saudacao] = saudar;
+
+console.log(saudacao);
+
+
+
+// ex 2
+let comida = 'gato';
+let animal = 'água';
+let bebida = 'arroz';
+
+console.log(comida, animal, bebida); // arroz gato água
+
+// Utilizando array destructuring, faça com que os valores apareçam nas variáveis correspondentes ao seu verdadeiro tipo
+// --- n entendi
+let comida = 'gato';
+let animal = 'água';
+let bebida = 'arroz';
+
+const valores = ['arroz', 'gato', 'água'];
+const nomeComValores = [comida, animal, bebida] = valores;
+console.log(nomeComValores);
+
+
+//ex 3
+let numerosPares = [1, 3, 5, 6, 8, 10, 12];
+
+console.log(numerosPares); // [6, 8, 10, 12];
+
+// Utilize array destructuring para produzir o resultado esperado pelo console.log abaixo
+
+// ----- não entendi
+let numerosPares = [1, 3, 5, 6, 8, 10, 12];
+const numbersPares = numerosPares.filter((numeroPar) => {
+  let condicao = numeroPar % 2 === 0 ? numeroPar : 
+})
+
+
+
+let numerosPares = [1, 3, 5, 6, 8, 10, 12];
+
+console.log(numerosPares); // [6, 8, 10, 12];
+
+// Utilize array destructuring para produzir o resultado esperado pelo console.log abaixo
+
+[,,, ...numerosPares] = numerosPares;
+
+console.log(numerosPares);

@@ -16,3 +16,17 @@ greeting('ingrid'); // Welcome usuário!
 const greeting = (user = 'usuário') => console.log(`Welcome ${user}!`);
 
 greeting(); // // Welcome usuário!
+
+// --------------------------------
+
+
+
+// para fixar
+
+const multiply = (number, value = 1) => {
+  // Escreva aqui a sua função
+  return number * value
+
+};
+
+console.log(multiply(2,2));

@@ -19,8 +19,6 @@ greeting(); // // Welcome usuário!
 
 // --------------------------------
 
-
-
 // para fixar
 
 const multiply = (number, value = 1) => {

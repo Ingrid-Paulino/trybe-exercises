@@ -27,15 +27,20 @@ console.log(fourthCountry); // Canada
 // ex 1
 const saudacoes = ['Olá', (saudacao) => console.log(saudacao)];
 
+const [sauda]
 saudacoes[1](saudacoes[0]); // Olá
 
 // Produza o mesmo resultado acima, porém utilizando array destructuring
 // -- não entendi
-const saudar = ['Olá'];
-const [saudacao] = saudar;
+// const saudar = ['Olá'];
+// const [saudacao] = saudar;
 
-console.log(saudacao);
 
+// console.log(saudacao);
+
+// const realizaSaudacao = saudacoes[1];
+// const saudacao = saudacoes[0];
+// realizaSaudacao(saudacao);
 
 
 // ex 2
@@ -50,10 +55,10 @@ console.log(comida, animal, bebida); // arroz gato água
 let comida = 'gato';
 let animal = 'água';
 let bebida = 'arroz';
-
+console.log(bebida);
 const valores = ['arroz', 'gato', 'água'];
-const nomeComValores = [comida, animal, bebida] = valores;
-console.log(nomeComValores);
+  [comida, animal, bebida] = valores;
+console.log(bebida);
 
 
 //ex 3

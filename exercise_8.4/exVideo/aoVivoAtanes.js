@@ -235,3 +235,12 @@ let entregasResumo = pedidos.reduce((acc, pedido)=>{
 }, []);
 
 console.log(entregasResumo);
+
+
+function countAnimals(especiess) {
+  // seu código aqui
+  if (especiess) return species.find((nome) => nome.name === especiess).residents.length;
+
+  return species.reduce((acc, currElement) => ({
+    ...acc, [currElement.name]: currElement.residents.length }), {});
+}

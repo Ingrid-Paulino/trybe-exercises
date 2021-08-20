@@ -1,7 +1,7 @@
 const {sum,
   myRemove,
   myRemoveWithoutCopy,
-  myFizzBuzz} = require("../js/parteUmACinco");
+  myFizzBuzz} = require("../js/parte1");
 
 describe('sum', ()=> {
   //ex1

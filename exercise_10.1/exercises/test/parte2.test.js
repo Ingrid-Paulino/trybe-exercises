@@ -1,0 +1,1 @@
+//fazer no projeto Playground functions. Refatorando-o.

@@ -43,3 +43,17 @@ for(let i = 0; i <= 10; i += 1 ) {
 for(let i = 0; i <= 10; i += 1 ) {
     console.log(i)
 }
+
+
+// me retorna a letra da string na posição que eu quero 
+function testDEString(name) {
+    return name[name.length - 1] //sempre vai me devolver a ultima letra
+}
+console.log(testDEString('Ingrid'));
+
+
+
+function testDeString(name) {
+    return name[name.length - 2] // sempre vai me retornar, a penutima letra
+}
+console.log(testDeString('Ingrid'));

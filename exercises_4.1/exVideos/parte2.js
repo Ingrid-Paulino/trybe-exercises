@@ -15,6 +15,12 @@ const patientInfo = {
 };
 const patientEmail = "ana@email.com";
 
+// deleta uma propriedade do obj
+delete patientInfo.firstName
+// delete patientInfo['firstName']
+// console.log(patientInfo);
+
+
 console.log(typeof patientId);
 console.log(typeof isEnrolled);
 console.log(typeof patientInfo);

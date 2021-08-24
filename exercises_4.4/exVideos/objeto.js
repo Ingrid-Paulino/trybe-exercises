@@ -91,40 +91,40 @@ for(let key in names) {
 //-------------------------
 
 
- let car = {
-   model: 'A3 Sedan',
-   manufacturer: 'Audi',
-   year: 2020
- };
+let car = {
+model: 'A3 Sedan',
+manufacturer: 'Audi',
+year: 2020
+};
 
- for(let _key in car) {
-   console.log(_key, car[_key]);
- };
+for(let _key in car) {
+console.log(_key, car[_key]);
+};
 
 //---------------------------------------
 //Parte I - Objetos e For/In
 
 let info = {
-   'personagem': 'Margarida',
-   origem: 'Pato Donald',
-   nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
- };
+'personagem': 'Margarida',
+origem: 'Pato Donald',
+nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+};
 
-  console.log(`Bem-Vinda, ${info.personagem}`)
+console.log(`Bem-Vinda, ${info.personagem}`)
 
-  info.recorrente = 'Sim'
+info.recorrente = 'Sim'
 
-  console.log(info)
-
-  for (let key in info) {
-      console.log(key)
-  }
-
-  console.log('-----------------------')
+console.log(info)
 
 for (let key in info) {
-      console.log(info[key]);
-  }
+    console.log(key)
+}
+
+console.log('-----------------------')
+
+for (let key in info) {
+    console.log(info[key]);
+}
 
 
 
@@ -132,16 +132,16 @@ let info2 = {
     personagem: 'Tio Patinhas',
     origem:"Christmas on Bear Mountain, Dell's Four Color Comics #178'" ,
     nota: 'O último MacPatinhas',
-/    recorrente: 'sim'
-  };
+    ecorrente: 'sim',
+};
 
 
-  function dadosInfo(info, info2) {
-  for(let key in info) {
-       console.log(info[key], 'e' , info2[key])  
+function dadosInfo(info, info2) {
+for(let key in info) {
+    console.log(info[key], 'e' , info2[key])  
     } 
-  }
- console.log(dadosInfo(info, info2))
+}
+console.log(dadosInfo(info, info2))
 
 
 

@@ -45,15 +45,8 @@ for(let i = 0; i <= 10; i += 1 ) {
 }
 
 
-// me retorna a letra da string na posição que eu quero 
-function testDEString(name) {
-    return name[name.length - 1] //sempre vai me devolver a ultima letra
+for (let hora = 1; hora <= 12; hora += 1) {
+    for (let min = 0; min <= 60; min += 1) {
+        console.log(`${hora}:${min} `);
+    }
 }
-console.log(testDEString('Ingrid'));
-
-
-
-function testDeString(name) {
-    return name[name.length - 2] // sempre vai me retornar, a penutima letra
-}
-console.log(testDeString('Ingrid'));

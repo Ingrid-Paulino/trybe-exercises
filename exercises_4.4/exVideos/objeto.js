@@ -142,7 +142,3 @@ for(let key in info) {
     } 
 }
 console.log(dadosInfo(info, info2))
-
-
-
-

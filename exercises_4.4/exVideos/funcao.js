@@ -22,3 +22,18 @@ function maiorValor(numeros) {
 
 
 console.log(maiorValor([2, 3, 6, 7, 10, 1]));
+
+
+
+// me retorna a letra da string na posição que eu quero 
+function testDEString(name) {
+    return name[name.length - 1] //sempre vai me devolver a ultima letra
+}
+console.log(testDEString('Ingrid'));
+
+
+
+function testDeString(name) {
+    return name[name.length - 2] // sempre vai me retornar, a penutima letra
+}
+console.log(testDeString('Ingrid'));

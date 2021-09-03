@@ -7,19 +7,36 @@ class LoginForm extends React.Component {
       email: '',
       password: '',
     }
+
+    // FORMA 1
     // this.handleChange = this.handleChange.bind(this); //se usarmos ArrowFunction Não precisa de bind
 
-    this.handleChangePassword = this.handleChangePassword.bind(this);
+    // this.handleChangePassword = this.handleChangePassword.bind(this);
+
+    this.handleChange = this.handleChange.bind(this);
   }
 
+  // FORMA 1
   //Não é recomendado fazer uma função por input
   //se usarmos ArrowFunction Não precisa de bind
-  handleChange = (event) => { 
-    this.setState({ email: event.target.value });
+  // handleChange = (event) => { 
+  //   this.setState({ email: event.target.value });
+  // }
+
+  // handleChangePassword (event) { 
+  //   this.setState({ password: event.target.value });
+  // }
+
+  handleChange (event) { 
+    //event.target.name vai funcionar para todos os inputs
+    this.setState({ [event.target.name]: event.target.value });
   }
 
-  handleChangePassword (event) { 
-    this.setState({ password: event.target.value });
+  handleSubmit = (event) => {
+    event.preventDefault();
+    const { email } = this.state;
+    alert(` O login foi realizado ${email} `)
+
   }
 
   render() {
@@ -28,9 +45,10 @@ class LoginForm extends React.Component {
     return (
     <section className="login-form">
       <h1>Login</h1>
-      <form>
+      <form onSubmit={this.handleSubmit}>
+        {/* FORMA 1 */}
         {/* Referencia: https://pt-br.reactjs.org/docs/forms.html */}
-        <label htmlFor="email">
+        {/* <label htmlFor="email">
           Email:
           <input 
             type="email" 
@@ -49,7 +67,29 @@ class LoginForm extends React.Component {
             value={ password }
             onChange={ this.handleChangePassword } //handleChange é a função
           />
-        </label>
+        </label> */}
+
+        <label htmlFor="email">
+                  Email:
+                  <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    value={ email }
+                    onChange={ this.handleChange } //handleChange é a função
+                  />
+                </label>
+                <label htmlFor="password">
+                  Password
+                  <input 
+                    type="password" 
+                    name="password" 
+                    id="password" 
+                    value={ password }
+                    onChange={ this.handleChange } //handleChange é a função
+                  />
+                </label>
+                <button type="submit">Fazer login</button>
       </form>
     </section>
     )

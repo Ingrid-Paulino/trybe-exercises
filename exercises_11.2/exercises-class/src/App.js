@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React from 'react';
+// import Image from './components/Image';
 import './App.css';
+import Pokedex from './components/Pokedex';
+import pokemons from './service/data';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Image source="https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg" alternativeText="Cute cat staring" /> */}
+      <h1> Pokedex </h1>
+      <Pokedex pokemons={pokemons}/>
+      {/* // No arquivo App.js, estamos renderizando o componente da Pokedex.
+      // Criamos a prop "pokemons", e nela chamamos o nosso json "pokemons",
+      // pokemons={} é a nossa prop e o valor dentro das {} é o nosso json,
+      // ou seja nomeDaProps={valorDaProps}, o nome da props é o que foi passado
+      // dentro do componente Pokedex.
+      // O valor da props, vem o import que fizemos na linha 3 do arquivo data.js
+      // pois desta forma poderemos trabalhar com esses dados via "props".
+      // Uma informação importante é que podemos dar qualquer nome a uma prop,
+      // mas atente-se para que seja um nome descritivo. */}
+    
     </div>
   );
 }

@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event'
 // import { Router } from 'react-router'
 // import { MemoryRouter, BrowserRouter } from 'react-router-dom'
 import { MemoryRouter } from 'react-router-dom'
-// import { createMemoryHistory } from 'history'
+// import { createMemoryHistory } from 'history';
 
 import App from '../App';
 import renderWithRouter from './utils/renderWithRouter';
@@ -21,13 +21,14 @@ describe('App.js test', () => {
 
     // Forma 2
     render(
-      <MemoryRouter>
+      // <MemoryRouter fica no lugar do browserRouter
+      <MemoryRouter> 
         <App />
       </MemoryRouter>,
     );
 
     const aboutText = screen.getByRole('heading', {
-      level: 1,
+      level: 1, //h1
       name: 'Página sobre mim',
     });
     expect(aboutText).toBeInTheDocument();
@@ -46,7 +47,6 @@ describe('App.js test', () => {
     expect(projectText).toBeInTheDocument();
   });
 });
-
 
 test('ao entrar na página verifica se o texto "sobre mim"'
 + 'aparece e clica no link de comentários', () => {
@@ -74,6 +74,29 @@ test('ao entrar na página verifica se o texto "sobre mim"'
 });
 
 test('exibe a página "Não encontrado" quando eu digitar uma rota inválida', () => {
+  //forma1 - podemos usar dessa forma e não utilizar o renderWithRouter.js
+
+  // const customHistory = createMemoryHistory()
+  // render(
+  //   <Router history={ customHistory }>
+  //     <App />
+  //   </Router>,
+  // );
+
+  // customHistory.push('/rota-que-nao-existe');
+
+  // Forma 2
+    // const customHistory = createMemoryHistory()
+  // const { getByText, getAllTestId }= render(
+  //   <Router history={ customHistory }>
+  //     <App />
+  //   </Router>,
+  // );
+
+  // customHistory.push('/rota-que-nao-existe');
+
+
+  //Forma 3 - mais recomendada
   const { history } = renderWithRouter(<App />);
 
   history.push('/rota-que-nao-existe');
@@ -107,4 +130,3 @@ test('ao entrar na página de comentários eu consigo add um comentário', () =>
   const xablauText = screen.getByText('xablau');
   expect(xablauText).toBeInTheDocument();
 });
-

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Redux basic example</title>
+        <!-- importação do redux via cdn -->
+        <script src=“https://unpkg.com/redux@latest/dist/redux.min.js”></script>
+    </head>
+    <body>
+        <div>
+          Clicked: <span id=“value”>0</span> times
+          <button id=“increment”>+</button>
+          <button id=“decrement”>-</button>
+          <button id=“incrementBy10”>Adiciona 10</button>
+        </div>
+        <script>
+
+          //Exemplo de Action
+          //nossas action
+          const action = {
+            type: 'ADD_ITEM',
+            value: 10,
+          }
+
+          // Criação do reduce
+          //reduce é uma função que recebe como parametro o state e action como padrao 
+          // state poderia ser qualquer coisa, obj, array...
+          function counterReducer(state = 0, action) {
+            switch (action.type) {
+              // state = state + 1 (n podemos fazer isso)
+              case 'INCREMENT':
+                return state + 1;
+              case 'DECREMENT':
+                return state - 1;
+              case 'INCREMENT10':
+                return state + 10;
+              default:
+                return state;
+            }
+          };
+
+          const store = Redux.createStore(
+            counterReducer,
+            window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+            ) //cria a store, passa o reduce commo parametro
+
+          //add o evento ao botao increment
+          document.getElementById('increment')
+            .addEventListener('click', () => {
+              store.dispatch({ type: 'INCREMENT' })  // ele dispara uma achão
+            });
+
+            //add o evento ao botao DECREMENTAR
+          document.getElementById('decrement')
+            .addEventListener('click', () => {
+              store.dispatch({ type: 'DECREMENT' })  // ele dispara uma achão
+            });
+
+            //add o evento ao botao incrementAR 10
+          document.getElementById('incrementBy10')
+            .addEventListener('click', () => {
+              store.dispatch({ type: 'INCREMENT10' })  // ele dispara uma achão
+            });
+
+
+          //função subscribe - executa sempre que o stado é atualizado
+          //toda vez que a store for atualizada a aplicação é atualizada
+          store.subscribe(() => {
+            document.getElementById('value').innerHTML = store.getState();
+          })
+
+        </script>
+        </body>
+</html>

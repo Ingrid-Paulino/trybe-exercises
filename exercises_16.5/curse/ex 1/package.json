@@ -1,5 +1,5 @@
 {
-  "name": "exercises_16.2",
+  "name": "curso_2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,7 +11,6 @@
     "react-redux": "^7.2.5",
     "react-scripts": "4.0.3",
     "redux": "^4.1.1",
-    "redux-devtools-extension": "^2.13.9",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

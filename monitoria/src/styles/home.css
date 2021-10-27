@@ -1,0 +1,42 @@
+.dark {
+  background-color: rgb(5, 5, 5);
+  height: 100vh;
+}
+
+.light {
+  background-color: rgb(199, 176, 243);
+  height: 100vh;
+}
+
+.light-switch-button {
+  background-color: rgba(0,0,0,0);
+  border: none;
+}
+
+.light-switch-button .light-switch {
+  left: 120px;
+  position: absolute;
+  top: 300px;
+  width: 8vw;
+}
+
+.lamp {
+  height: 30vh;
+  position: absolute;
+  left: 600px;
+}
+
+.sullivan {
+  bottom: 0;
+  height: 80vh;
+  position: absolute;
+  right: 0;
+}
+
+.title-light-mode {
+  color: rgb(79, 160, 226);
+  font-size: 40px;
+  left: 10px;
+  margin: 0;
+  position: absolute;
+}

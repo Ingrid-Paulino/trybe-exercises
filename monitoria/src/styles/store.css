@@ -1,0 +1,212 @@
+.header-light-mode {
+  background-color: #85c9e4;
+  height: 65px;
+  margin: 0;
+}
+
+.header-dark-mode {
+  background-color: rgb(106, 1, 155);
+  height: 65px;
+  margin: 0;
+}
+
+.title-store-light-mode {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.title-store-dark-mode {
+  color: rgb(33, 33, 43);
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.main-light-mode {
+  align-items: flex-start;
+  background-color: rgb(199, 176, 243);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.main-dark-mode {
+  align-items: flex-start;
+  background-color: rgb(33, 33, 43);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.cards-container {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: 60vw;
+}
+
+.product-card {
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 105, 0.30) 0px 2px 5px 0px, rgba(0, 0, 0, 0.1) 0px 1px 1px 0px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  margin: 20px;
+  min-height: 250px;
+  text-align: center;
+  transition: all .3s ease-in-out;
+  width: 162px;
+}
+
+.product-card:hover {
+  transform: scale(1.1);
+}
+
+.product-img {
+  border-radius: 10px;
+  height: 150px;
+  width: 160px;
+}
+
+.product-name {
+  font-size: 14px;
+  padding: 8px;
+}
+
+.cart-light-mode {
+  align-items: center;
+  background-color: #d9fa7e;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 105, 0.30) 0px 2px 5px 0px, rgba(0, 0, 0, 0.1) 0px 1px 1px 0px;
+  color: #6bc0e2;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  margin-top: 20px;
+  min-height: 500px;
+  text-align: center;
+  width: 30vw;
+}
+
+.cart-dark-mode {
+  align-items: center;
+  background-color: #7bb934;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 105, 0.30) 0px 2px 5px 0px, rgba(0, 0, 0, 0.1) 0px 1px 1px 0px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  margin-top: 20px;
+  min-height: 500px;
+  text-align: center;
+  width: 30vw;
+}
+
+.title-cart-light-mode {
+  color: #6bc0e2;
+  margin: 10px 0;
+}
+
+.title-cart-dark-mode {
+  color: rgb(33, 33, 43);
+  margin: 10px 0;
+}
+
+.price-button {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: rgb(106, 1, 155);
+}
+
+.add-button-card {
+  background-color: rgb(199, 176, 243);
+  border: 1px solid rgb(199, 176, 243);
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 105, 0.30) 0px 2px 5px 0px, rgba(0, 0, 0, 0.1) 0px 1px 1px 0px;
+  color: white;
+  margin-left: 20px;
+}
+
+.add-button-card:hover {
+  background-color: rgb(106, 1, 155);
+  border: 1px solid rgb(106, 1, 155);
+  box-shadow: rgba(50, 50, 105, 0.8) 0px 2px 5px 0px, rgba(0, 0, 0, 0.1) 0px 1px 1px 0px;
+  border-radius: 10px;
+  color: white;
+  margin-left: 20px;
+}
+
+.add-button-card:active {
+  background-color: rgb(106, 1, 155);
+  border: 1px solid rgb(106, 1, 155);
+  box-shadow: rgba(50, 50, 105, 0.30) 1px 2px 2px 0px, rgba(0, 0, 0, 0.1) 1px 1px 1px 0px;
+  border-radius: 10px;
+  color: white;
+  margin-left: 20px;
+}
+
+.card-cart {
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 105, 0.30) 1px 2px 2px 0px, rgba(0, 0, 0, 0.1) 1px 1px 1px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 8px;
+  padding: 0 10px;
+  width: 250px;
+}
+
+.card-cart-img {
+  height: 80px;
+  width: 80px;
+}
+
+.remove-button-card {
+  background-color: rgb(224, 174, 179);
+  border: 1px solid rgb(224, 174, 179);
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 105, 0.30) 0px 2px 5px 0px, rgba(0, 0, 0, 0.1) 0px 1px 1px 0px;
+  color: white;
+  margin-left: 20px;
+}
+
+.remove-button-card:hover {
+  background-color: rgb(189, 68, 80);
+  border: 1px solid rgb(189, 68, 80);
+  box-shadow: rgba(50, 50, 105, 0.8) 0px 2px 5px 0px, rgba(0, 0, 0, 0.1) 0px 1px 1px 0px;
+  border-radius: 10px;
+  color: white;
+  margin-left: 20px;
+}
+
+.remove-button-card:active {
+  background-color: rgb(189, 68, 80);
+  border: 1px solid rgb(189, 68, 80);
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 105, 0.30) 1px 2px 2px 0px, rgba(0, 0, 0, 0.1) 1px 1px 1px 0px;
+  color: white;
+  margin-left: 20px;
+}
+
+.num-items {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  box-shadow: rgba(50, 50, 105, 0.30) 1px 2px 2px 0px, rgba(0, 0, 0, 0.1) 1px 1px 1px 0px;
+  font-weight: bold;
+  margin: 20px 0 5px 0;
+  padding: 10px 15px;
+  text-align: center;
+}

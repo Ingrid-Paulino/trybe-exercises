@@ -40,8 +40,10 @@ function Register() {
 
   //forma 2 - onChange
   //forma dinamica 
+  // evento é sempre uma ação do usuario
+  // target === alvo
   const handleChange = ({ target: { name, value } }) => {
-    setRegister({ ...register, [name]: value });
+    setRegister({ ...register, [name]: value });// name é uma variavel do meu input 
   };
 
   return (

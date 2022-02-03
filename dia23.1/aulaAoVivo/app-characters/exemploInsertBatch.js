@@ -19,7 +19,7 @@ connection.query(
 
 
 connection.query(
-  'SELECT * FROM characters'
+  'SELECT * FROM characters' //não é obrigatorio colocar o nome do banco ex: 'SELECT * FROM live_lecture_23_1.characters' 
 ).then(([characters]) => console.log(characters));
 
 console.log(connection.execute('SELECT * FROM characters')) //retorna um Promise { <pending> } por isso é importante colocar de forama assincrona a query da linha 21

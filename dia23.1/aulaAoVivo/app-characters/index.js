@@ -7,6 +7,8 @@ const app = express();
 
 app.use(bodyParser.json());
 
+//usar a porta dentro de uma variavel  é interesante para se eu quiser abrir  a aplicação em outra porta
+//ex comando : PORT=3005 npm run dev
 const PORT = process.env.PORT || '3001';
 
 app.get('/characters', async (req, res) => {
@@ -23,7 +25,10 @@ app.get('/character/:id', async (req, res) => {
 });
 
 app.post('/characters', async (req, res) => {
-  const { name, cartoon } = req.body;
+  const { name, cartoon } = req.body; //ou
+  // const name = req.body.name;
+  // const cartoon = req.body.cartoon;
+
   
   const character = await create(name, cartoon);
 

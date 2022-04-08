@@ -1,0 +1,126 @@
+Herança e interfaces
+Relembrando:
+  - Classe representa algo genérico, uma estrutura.
+  - Objeto é um elemento gerado nos moldes de uma classe.
+  - Atributo é uma variável no contexto de uma classe.
+  - Método é uma função no contexto de uma classe.
+  - Abstração é a não exibição do funcionamento interno da classe, de forma a simplificar a sua utilização.
+  - Encapsulamento é a disponibilização apenas dos atributos e métodos que são necessários para o bom uso da classe.
+
+  De novidade temos herança , que é a capacidade de especializar classes, de forma a atender objetivos mais específicos, e composição , que é o uso de outras classes, delegando a elas atribuições específicas delas.
+
+  O pilar herança permite que classes que herdam de outras sejam criadas, de forma a herdar também seus métodos e atributos. 
+  Antes de tudo, é importante salientar que herança é uma característica da classe, e não do objeto.
+Ou seja, criamos uma classe que herda de outra, e não um objeto que herda de outro.
+A classe base é denominada classe pai ou superclasse , e a classe que estende dela é denominada classe filha , ou subclasse .
+
+A sintaxe para criar uma classe que herda outra é bem simples, basta utilizar a palavra reservada extends .
+
+
+Atributos protegidos:
+   nn podemos alterar um atributo privado fora da classe dele de origim 
+
+Entretanto, as vezes precisamos manter alguns atributos e métodos privados do mundo externo , mas possíveis de serem modificados dentro de subclasses.
+É aí que entra o protected .
+
+// usamos protected no lugar de private para subclasses poder ter acesso do atributo privado 
+
+Super:
+  Sempre que você, na subclasse, queira referenciar a superclasse, poderá utilizar a palavra reservada super 
+    class Animal {
+    constructor(protected birthDate: Date) { }
+  }
+  class Bird extends Animal {
+    constructor(public name: string) {
+      super(new Date());
+    }
+  }
+
+
+
+- Se eu nn colocar constructor dentro da classe filha ela vai funcionar ex:
+     class Bird extends Animal {
+    fly() {
+      console.log(`${this.name} está voando!`);
+    }
+  }
+
+
+- se na classe filha tiver construtor, ele deve ter os mesmos atributos do da class mae, mas obs: podemos acrescentar mais(outros). por isso usamos o super
+        class Animal {
+        constructor(protected birthDate: Date) { }
+      }
+      class Bird extends Animal {
+        constructor(public name: string) {
+          super(new Date());
+        }
+      }
+
+  O super é basicamente uma referência à superclasse.
+Ao ser invocado como uma função, está invocando o construtor da superclasse.
+
+Implementando interfaces:
+  -Ao utilizarmos herança, geralmente queremos garantir o funcionamento de uma subclasse onde uma superclasse é esperada.
+  -Existem diversas outras utilidades de herança, mas se o que se almeja é só firmar um contrato , no qual uma classe deve obrigatoriamente possuir alguns atributos e implementar alguns métodos, pode ser interessante utilizar uma interface .
+  -A interface especifica quais componentes uma determinada entidade deve possuir/implementar. No caso de Orientação a Objetos, essa entidade é uma classe. Importante ressaltar que, diferentemente do que acontece ao herdar uma classe, não podemos deixar nenhum método já implementado em uma interface, portanto a classe que implementa uma interface vai sempre obrigatoriamente ter que implementar todos os métodos declarados na interface.
+
+  com interface nos usamos implements ao inves de extends
+
+
+  -Importante salientar que a interface é um contrato de tudo que a classe deve possuir de forma pública.
+Atributos privados precisam ter seu correspondente público, e você pode usar getters e setters como uma forma pública de acessar atributos privados.
+
+Interfaces versus Classes:
+Interfaces e (super)classes podem servir para especificar o comportamento de classes, mas de formas e em níveis distintos.
+  - Quando utilizamos interfaces, o que queremos é garantir que alguns atributos e métodos existam, sem se importar com o que fazem.
+É mais um "me arranja alguma entidade que tenha o método x , pois eu vou precisar chamar x , e se ele não existir vai dar erro".
+
+  - Já quando utilizamos a herança, disponibilizamos não só um contrato, mas uma base já implementada de código que funciona, de forma que apenas vamos especializar esta base de código adicionando novas funcionalidades.
+
+  Composição:
+  - A ideia de herança é muito boa para reuso de código. Entretanto, deve-se tomar cuidado com o uso indevido.
+  - Utilizamos herança sempre que queremos especializar uma classe, ou seja, deixar ela mais específica. É bem simples: basta se perguntar se subclasse é um tipo de superclasse . Se a resposta for não, então não devemos utilizar herança.
+
+  Agora imagine que você possui no contexto de um jogo de xadrez, um tabuleiro e as peças em suas posições. Além disso, lhe é solicitado que o tabuleiro tenha um método save , que o salva em um banco de dados. Não faz sentido que a classe Board (tabuleiro) (nem a classe ChessBoard , tabuleiro de xadrez) herde da classe Database , visto que um tabuleiro não é um tipo de banco de dados. O correto neste caso seria utilizar composição, o que daria algo mais ou menos assim:
+
+      interface Board {
+      save(): void;
+      // ...
+    }
+
+    class GenericBoard implements Board {
+      // Finja que faz sentido as casas do tabuleiro serem um array de strings
+      constructor(public houses: string[], protected database: Database) {}
+
+      public save() {
+        this.database.save(this.houses);
+      }
+    }
+
+    class ChessBoard extends GenericBoard {
+      constructor(
+        public houses: string[],
+        protected database: Database,
+        // Parâmetros específicos de um tabuleiro de xadrez
+      ) {
+        // Implementação específica de um tabuleiro de xadrez
+      }
+    }
+
+    interface Database {
+      save(content: any): void;
+      // ...
+    }
+
+    class MySQLDatabase implements Database {
+      private connection: MySQLConnection; // Uma conexão fictícia com o banco
+      // ...
+      save(content: any) {
+        // Uma query fictícia para salvar o conteúdo no banco
+        this.connection.query(`INSERT INTO table_name VALUES (${content})`);
+      }
+    }
+
+    const db = new MySQLDatabase();
+    const board = new ChessBoard(['A1', 'A2', 'B1', 'B2'], db);
+    board.save();
